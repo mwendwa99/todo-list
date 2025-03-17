@@ -61,7 +61,16 @@ function App() {
 
   return (
     <div className="app">
-      <img src="images/todo.jpg" alt="todo list image" className="todo-image" />
+      <img
+        src="/images/todo.jpg"
+        alt="Todo list image"
+        className="todo-image"
+        loading="lazy"
+        onError={(e) => {
+          e.target.onerror = null;
+          e.target.src = "/images/fallback.jpg";
+        }}
+      />
       <div className="todo-container">
         <h1>Todo List</h1>
 
