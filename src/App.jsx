@@ -61,6 +61,7 @@ function App() {
 
   return (
     <div className="app">
+      <img src="images/todo.jpg" alt="todo list image" className="todo-image" />
       <div className="todo-container">
         <h1>Todo List</h1>
 
